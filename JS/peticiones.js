@@ -8,7 +8,7 @@
 //    2. EL PERIODO QUE SE QUIERE GRAFICAR (1 SEMANA, 1 MES O 1 AÑO)
 //
 //
-import { crearChart } from '/JS/crearGrafica.js';  
+import { crearChart } from './crearGrafica.js';  
 export function enviarPeticion(moneda,periodo){
 
     let tiempo = 2592000000 //TIEMPO ES UNA VARIABLE QUE CONTIENE EL PERIODO EN FORMATO DE MILISEGUNDOS PORQUE ASÍ LO UTILIZA LA API
