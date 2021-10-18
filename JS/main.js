@@ -1,4 +1,4 @@
-import { enviarPeticion } from '/JS/peticiones.js'; 
+import { enviarPeticion } from './peticiones.js'; 
 
 
 /*
