@@ -2,7 +2,7 @@
 //esta funcion crearChart recibe 2 valores
 // 1. el arreglo de fechas que se obtuvo en la funcion de peticiones.js
 // 2. el arreglo de precios que se obtuvo en petiones.js
-export function crearChart(fechas,precios){
+export function crearChart(fechas,precios,titulo){
     var ctx = document.getElementById('myChart');//obtiene el id del elemento canvas del HTML
     //Construye el gráfico con todos los parámetros necesarios 
     //Las instrucciones de cómo usar cada parámetro está en la página de chart.js
@@ -11,7 +11,7 @@ export function crearChart(fechas,precios){
       data: {
           labels: fechas, //aquí se utiliza el primer arreglo
           datasets: [{
-              label: 'Costo en USD',
+              label: titulo,
               pointRadius: 0,
               fill: {
                   target:'origin',

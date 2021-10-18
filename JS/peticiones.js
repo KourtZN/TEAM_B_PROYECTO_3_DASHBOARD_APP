@@ -17,17 +17,17 @@ export function enviarPeticion(moneda,periodo){
     //ESTOS IFs DECIDEN LOS VALORES QUE SE VAN A MANDAR EN LA PETICIÓN DEPENDIENDO DEL PERIODO QUE SE QUIERE CONSULTAR
     if(periodo === 'año'){
         intervalo = 'd1'
-        tiempo = 31557600000
+        tiempo = 31557600000 //un año en milisegundos
     }else if(periodo === 'mes'){
         intervalo = 'd1'
-        tiempo = 2592000000
+        tiempo = 2592000000 //un mes en milisegundos
     }else {
         intervalo = 'h6'
-        tiempo = 604800000
+        tiempo = 604800000 //una semana en milisegundos
     }
 let endDate = Date.now() // fecha de hoy en milisegundos
 let startDate = Date.now() - tiempo // RESTAMOS EL PERIODO A LA FECHA DE HOY PARA OBTENER LA FECHA DE INICIO DE LA GRÁFICA Y SIEMPRE TENER DATOS ACTUALES
-
+//Con esta linea se ensambla el endpoint con sus parámetros
 const urlApi = `https://api.coincap.io/v2/assets/${moneda}/history?interval=${intervalo}&start=${startDate}&end=${endDate}`
 
 //EJECUTAMOS PETICIÓN AL API CON LOS DATOS QUE QUEREMOS
@@ -45,7 +45,8 @@ datosFechas.then(response => response.json())
     })
     console.log(fechas) //COMPROBAMOS QUE SE LLENÓ CORRECTAMENTE LOS DOS ARREGLOS
     console.log(precios)
-    crearChart(fechas,precios) //MANDAR A CONSTRUIR EL CHART ENVIANDOLE LOS DATOS QUE UTILIZA PARA CREAR LA GRÁFICA
+    const titulo = `Precios de ${moneda} por ${periodo} al día de hoy, en USD` // armar titulo de la gráfica
+    crearChart(fechas,precios,titulo) //MANDAR A CONSTRUIR EL CHART ENVIANDOLE LOS DATOS QUE UTILIZA PARA CREAR LA GRÁFICA
     //console.log(preciosDias)
     
 })
