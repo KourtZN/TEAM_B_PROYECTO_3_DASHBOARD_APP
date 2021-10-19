@@ -8,9 +8,9 @@ body{
     
     background-color: black;
     padding: 2rem;
-    height: 36vh;
-    width: 94.99vw;
-    position: absolute;
+    height: 38vh;
+    width: 99vw;
+    max-width: 100%;
     bottom: 0;
     color:white;
     
