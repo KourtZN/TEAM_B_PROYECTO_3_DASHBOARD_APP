@@ -18,6 +18,7 @@ header a{
     text-decoration: none;
     color: #fff;
 }
+
 .container-flex{
     max-width: 90%;
     margin:0 auto;
@@ -58,6 +59,12 @@ header a{
 /*responsive*/
 
 @media (min-width:240px) and (max-width:720px){
+    header .logo{
+        display:none;
+    }
+    .container-menu{
+        justify-content: center;
+    }
     .container-hero{
         height: 90vh;
     }
