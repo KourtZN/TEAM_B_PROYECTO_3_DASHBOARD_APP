@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     width: 100%;
     height: auto;
