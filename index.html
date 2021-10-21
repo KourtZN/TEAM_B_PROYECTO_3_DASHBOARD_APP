@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/header.css">
+
+    <!-- CSS necesarias para el Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/fullscreen.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./carousel.css'>
+  
     <link rel="stylesheet" href="./styles/footer.css">
     <title>Dashboard TEAM B</title>
 
@@ -31,8 +37,58 @@
         </div>
     </header>
     <main>
-        <section>    
-            <!--aquí poner carrusel -->
+        <section>
+            <!-- carrúsel o carousel -->
+            <div class="titulocarousel">
+                <h1>CRIPTOMONEDAS</h1>
+            </div>
+
+            <!-- Librería Flickity HTML init -->
+            <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 2 , "initialIndex": 2}'>
+                <div>
+                    <h2>LiteCoin</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/litecoin-ltc-logo-full.svg" />
+                </div>
+                <div>
+                    <h2>DogeCoin</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/dogecoin-doge-logo.svg" />
+                </div>
+                <div>
+                    <h2>Bitcoin</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-btc-logo-full.svg" />
+                </div>
+                <div>
+                    <h2>Ethereum</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/ethereum-eth-logo-full-vertical.svg" />
+                </div>
+                <div>
+                    <h2>Bitcoin Cash</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-cash-bch-logo-alternative.svg" />
+                </div>
+                <div>
+                    <h2>Eos</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/eos-eos-logo.svg" />
+                </div>
+                <div>
+                    <h2>ZCash</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/zcash-zec-logo.svg" />
+                </div>
+                <div>
+                    <h2>Tether</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/tether-usdt-logo.svg" />
+                </div>
+                <div>
+                    <h2>Compound Dai</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/compound-dai-cdai-logo.svg" />
+                </div>    
+                <div>
+                    <h2>Binance Coin</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/binance-coin-bnb-logo.svg" />
+                </div>
+                <div>
+                    <h2>Waves</h2>
+                    <img class="carousel-image" data-flickity-lazyload="./images/waves-waves-logo.svg" />
+                </div>
         </section>
         <section>
             <!--aquí poner sección de la gráfica -->
@@ -58,7 +114,7 @@
                     <li>Alma Viridiana Hernández Oropeza</li>
                     <li>Ahmet Fabián Kourt Neyra Gomez</li>
                     <li>Edgar González Rodríguez</li>
-                    <li>Guadalupe Valderas</li>
+                    <li>Guadalupe Balderas</li>
                     <li>Héctor Miguel Montemayor Rios</li>
                     <li>Ricardo José Guevara Gúzman</li>
                     <li>Roberto Eleuterio Zavala</li>
@@ -68,6 +124,13 @@
                 </p>
             </div>
             </footer>
+      
+          <!-- js carousel -->
+          <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+          <script src="https://unpkg.com/flickity@2/dist/fullscreen.js"></script>
+          <script src='./js/carousel.js'></script>
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>   
         <script type="module" src="./JS/main.js"></script>
     </body>
