@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/header.css">
 
     <!-- CSS necesarias para el Carousel -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/fullscreen.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./carousel.css'>
+  
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Dashboard TEAM B</title>
 
-    <title>DashBoard</title>
+    <style>A{text-decoration: none};</style>
 </head>
 
 <body>
-    <header>
-        <!-- aquí poner header-->
+    
+<header>
+        <div class="container-flex container-menu">
+            <a href="#"><h2>Ucoin</h2></a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li>|</li>
+                    <li><a href="#">criptomonedas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-flex container-hero">
+            <h1>Realiza inversiones inteligentes</h1>
+            <sub>Conoce el valor de las criptomonedas</sub>
+            <a href="#" class="btn-hero"><h2 >Iniciar</h2></a>
+        </div>
     </header>
     <main>
         <section>
@@ -62,7 +80,7 @@
                 <div>
                     <h2>Compound Dai</h2>
                     <img class="carousel-image" data-flickity-lazyload="./images/compound-dai-cdai-logo.svg" />
-                </div>
+                </div>    
                 <div>
                     <h2>Binance Coin</h2>
                     <img class="carousel-image" data-flickity-lazyload="./images/binance-coin-bnb-logo.svg" />
@@ -72,28 +90,49 @@
                     <img class="carousel-image" data-flickity-lazyload="./images/waves-waves-logo.svg" />
                 </div>
         </section>
-
         <section>
             <!--aquí poner sección de la gráfica -->
-
+            
             <!-- el elemento canvas es el que se usa para meter la gráfica en el DOM-->
             <div style="position: relative;width:800px;">
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="myChart" width="400" height="400" ></canvas> 
             </div>
+
         </section>
-    </main>
-    <footer>
-        <!-- aquí poner footer-->
-    </footer>
+        </main>
 
-    <!-- js carousel -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/fullscreen.js"></script>
-    <script src='./js/carousel.js'></script>
+        <!--Aquí empieza el footer-->
+        <footer>
+            <div class="footer">
+                <ul class="footer__list">
+                   <a href="#"><li>Dashboard</li></a>
+                    <li>TEAM B</li>
+                    <li> Ucamp</li>
+                </ul>
+            
+                <ul class="footer__ulist">
+                    <li>Alma Viridiana Hernández Oropeza</li>
+                    <li>Ahmet Fabián Kourt Neyra Gomez</li>
+                    <li>Edgar González Rodríguez</li>
+                    <li>Guadalupe Balderas</li>
+                    <li>Héctor Miguel Montemayor Rios</li>
+                    <li>Ricardo José Guevara Gúzman</li>
+                    <li>Roberto Eleuterio Zavala</li>
+                </ul>
+                <p class="footer__copy">
+                    TODOS LOS DERECHOS RESERVADOS ©TEAM B
+                </p>
+            </div>
+            </footer>
+      
+          <!-- js carousel -->
+          <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+          <script src="https://unpkg.com/flickity@2/dist/fullscreen.js"></script>
+          <script src='./js/carousel.js'></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
-    <script type="module" src="./JS/main.js"></script>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>   
+        <script type="module" src="./JS/main.js"></script>
+    </body>
 
 </html>
