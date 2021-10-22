@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 80%;
+    height: 250px;
+    margin: 50px auto 0 auto;
+    display: block;
+}
+
+.intro {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.intro h3 {
+    font-family: 'Montserrat';
+    font-weight:1200;
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.intro p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight:500;
+    text-align: center;
+}
+
+.grafica-section {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.grafica-section h4 {
+    font-family: 'Montserrat';
+    font-weight:1200;
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#botones {
+    width: 80%;
+    margin: auto;
+    display: block;
+    float: right;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight:500;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A37840;
+}
+
+#grafica {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    background-image:url(../img/back-grafica.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid #000;
+}
+.precio{
+    margin: 50px auto;
+    color: green;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 20px 0 0 0;
+    
+}

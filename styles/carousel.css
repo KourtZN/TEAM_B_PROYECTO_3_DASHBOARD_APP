@@ -1,0 +1,56 @@
+/* Desarrollado por Edgar Gonzalez */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+
+.carousel {
+  background: white;
+}
+
+
+.titulocarousel {
+  padding-top: 0px;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgb(55, 89, 200);
+}
+
+
+h2 {
+  text-align: center;
+  text-shadow: 2px 2px 5px rgb(55, 89, 200);
+}
+
+.carousel-image {
+  margin-top: 150px;
+  display: block;
+  height: 100px;
+  width: auto;
+  padding: 10px;
+  border: darkblue;
+  border-radius: 5%;
+  min-height: 300px;
+  max-height: 500px;
+
+  /* set min-width, allow images to set cell width */
+  min-width: 150px; /*150px;*/
+  max-width: 400px;  /*100%*/
+  margin-right: 20px;
+
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 2px 2px 5px rgb(129, 130, 134);
+  background: rgb(170, 245, 255);;
+}
+
+.carousel.is-fullscreen .carousel-image {
+  /*margin-top: 100px;*/
+  height: auto;
+  max-height: 100%;
+  
+}
+

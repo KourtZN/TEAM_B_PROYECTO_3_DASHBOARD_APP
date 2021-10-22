@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/header.css">
+
+    <!-- CSS necesarias para el Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/fullscreen.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles/carousel.css'>
+  
     <link rel="stylesheet" href="./styles/footer.css">
+
+    <link rel="stylesheet" href="./styles/grafica.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
     <title>Dashboard TEAM B</title>
 
     <style>A{text-decoration: none};</style>
@@ -18,30 +30,119 @@
             <a href="#"><h2>Ucoin</h2></a>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#">inicio</a></li>
+                    <li><a href="#carousel-container">inicio</a></li>
                     <li>|</li>
-                    <li><a href="#">criptomonedas</a></li>
+                    <li><a href="#main">criptomonedas</a></li>
                 </ul>
             </nav>
         </div>
         <div class="container-flex container-hero">
             <h1>Realiza inversiones inteligentes</h1>
             <sub>Conoce el valor de las criptomonedas</sub>
-            <a href="#" class="btn-hero"><h2 >Iniciar</h2></a>
+            <a href="#carousel-container" class="btn-hero"><h2 >Iniciar</h2></a>
         </div>
     </header>
     <main>
-        <section>    
-            <!--aquí poner carrusel -->
-        </section>
-        <section>
-            <!--aquí poner sección de la gráfica -->
-            
-            <!-- el elemento canvas es el que se usa para meter la gráfica en el DOM-->
-            <div style="position: relative;width:800px;">
-                <canvas id="myChart" width="400" height="400" ></canvas> 
+        <section id="carousel-container">
+            <!-- carrúsel o carousel -->
+            <div class="titulocarousel">
+                <h1>CRIPTOMONEDAS</h1>
             </div>
 
+            <!-- Librería Flickity HTML init -->
+            <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 2 , "initialIndex": 2}'>
+                <div>
+                    <h2>LiteCoin</h2>
+                    <a href="#main">
+                        <img class="carousel-image" data-flickity-lazyload="./images/litecoin-ltc-logo-full.svg" id="litecoin"/>
+                    </a>
+                </div>
+                <div>
+                    <h2>DogeCoin</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/dogecoin-doge-logo.svg" />
+                    </a>
+                </div>
+                <div>
+                    <h2>Bitcoin</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-btc-logo-full.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Ethereum</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/ethereum-eth-logo-full-vertical.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Bitcoin Cash</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-cash-bch-logo-alternative.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Eos</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/eos-eos-logo.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>ZCash</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/zcash-zec-logo.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Tether</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/tether-usdt-logo.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Compound Dai</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/compound-dai-cdai-logo.svg" />
+                </a>
+                </div>    
+                <div>
+                    <h2>Binance Coin</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/binance-coin-bnb-logo.svg" />
+                </a>
+                </div>
+                <div>
+                    <h2>Waves</h2>
+                    <a href="#main">
+                    <img class="carousel-image" data-flickity-lazyload="./images/waves-waves-logo.svg" />
+                </a>
+                </div>
+                </div>
+        </section>
+        <section id="main">
+
+            <div class="intro">
+                <h3 id="monedaTitulo">Bitcoins</h3>
+                <p id="descripcion">Bitcoin es un sistema de dinero en efectivo electrónico entre pares que no tiene una autoridad central y
+                    no depende de bancos u otras instituciones financieras para operar.</p>
+            </div>
+            <div class="grafica-section">
+                <h4>Conoce su valor</h4>
+                <div id="botones">
+                    <button id="semanal">Semanal</button>
+                    <button id="mensual">Mensual</button>
+                    <button id="anual">Anual</button>
+                    
+                </div>
+                <center><p id="precio" class="precio"></p></center>
+                
+            </div>
+        </section>
+    
+        <section id="grafica">
+            <div style="position: relative;width:100%;margin:auto;height:85%;">
+                <canvas id="myChart" width="400" height="400" ></canvas> 
+            </div>
         </section>
         </main>
 
@@ -49,7 +150,7 @@
         <footer>
             <div class="footer">
                 <ul class="footer__list">
-                   <a href="#"><li>Dashboard</li></a>
+                   <a href="#grafica-section" target="_blank"><li>Dashboard</li></a>
                     <li>TEAM B</li>
                     <li> Ucamp</li>
                 </ul>
@@ -68,6 +169,13 @@
                 </p>
             </div>
             </footer>
+      
+          <!-- js carousel -->
+          <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+          <script src="https://unpkg.com/flickity@2/dist/fullscreen.js"></script>
+          <script type="module" src='./js/carousel.js'></script>
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>   
         <script type="module" src="./JS/main.js"></script>
     </body>
