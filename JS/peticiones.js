@@ -46,6 +46,8 @@ datosFechas.then(response => response.json())
     console.log(fechas) //COMPROBAMOS QUE SE LLENÓ CORRECTAMENTE LOS DOS ARREGLOS
     console.log(precios)
     const titulo = `Precios de ${moneda} por ${periodo} al día de hoy, en USD` // armar titulo de la gráfica
+    let precio = document.getElementById('precio')
+    precio.innerHTML = `$${(precios[precios.length - 1]).toFixed(2)}`
     crearChart(fechas,precios,titulo) //MANDAR A CONSTRUIR EL CHART ENVIANDOLE LOS DATOS QUE UTILIZA PARA CREAR LA GRÁFICA
     //console.log(preciosDias)
     

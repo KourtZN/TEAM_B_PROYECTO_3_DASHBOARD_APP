@@ -7,7 +7,7 @@
 #main {
     width: 80%;
     height: 250px;
-    margin: 100px auto 0 auto;
+    margin: 50px auto 0 auto;
     display: block;
 }
 
@@ -72,11 +72,20 @@ button:hover {
 
 #grafica {
     width: 80%;
-    height: 800px;
+    height: 700px;
     margin: auto;
     background-image:url(../img/back-grafica.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
     border-top: 1px solid #000;
+}
+.precio{
+    margin: 50px auto;
+    color: green;
+    font-weight: bold;
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 20px 0 0 0;
+    
 }
