@@ -16,7 +16,7 @@ litecoin.addEventListener('click', ()=> {
     moneda = 'litecoin'
     tituloMoneda.innerHTML = moneda
     descripcion.innerHTML = 'Una de las altcoins más reconocidas en el criptomundo es Litecoin. Esta criptomoneda nació en octubre de 2011, como una alternativa a Bitcoin. De hecho, Litecoin es un fork del software Bitcoin Core, con el objetivo de mejorar Bitcoin. Su creador Charlie Lee es el ideólogo y la figura más reconocida de este proyecto. Lee dejó su trabajo en Google para dedicarse íntegramente al desarrollo de LTC y para conseguir sus objetivos se asoció con Xinxi Wang y Franklyn Richards.'
-    enviarPeticion(moneda,periodo)
+    enviarPeticion(moneda,periodo) 
 })
 
 //Listeners de los botones de periodos
