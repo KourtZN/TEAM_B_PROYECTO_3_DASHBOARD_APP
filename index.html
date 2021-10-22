@@ -9,7 +9,7 @@
     <!-- CSS necesarias para el Carousel -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/fullscreen.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='./carousel.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles/carousel.css'>
   
     <link rel="stylesheet" href="./styles/footer.css">
     <title>Dashboard TEAM B</title>
@@ -89,12 +89,20 @@
                     <h2>Waves</h2>
                     <img class="carousel-image" data-flickity-lazyload="./images/waves-waves-logo.svg" />
                 </div>
+                </div>
         </section>
         <section>
             <!--aquí poner sección de la gráfica -->
-            
+
+            <div style="position: relative;width:60%;margin:auto;">
+                <button id="semanal">Semanal</button>
+                <button id="mensual">Mensual</button>
+                <button id="anual">Anual</button>
+                
+            </div>
             <!-- el elemento canvas es el que se usa para meter la gráfica en el DOM-->
-            <div style="position: relative;width:800px;">
+            <div style="position: relative;width:60%;margin:auto;">
+
                 <canvas id="myChart" width="400" height="400" ></canvas> 
             </div>
 
@@ -128,7 +136,7 @@
           <!-- js carousel -->
           <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
           <script src="https://unpkg.com/flickity@2/dist/fullscreen.js"></script>
-          <script src='./js/carousel.js'></script>
+          <script type="module" src='./js/carousel.js'></script>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>   

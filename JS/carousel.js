@@ -25,5 +25,5 @@ Binance Coin  bnb
 Waves         waves-logo
 */
 
- enviarPeticion('bitcoin','año')
+ //enviarPeticion('bitcoin','año')
 

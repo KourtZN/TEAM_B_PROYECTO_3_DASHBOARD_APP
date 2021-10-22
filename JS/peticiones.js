@@ -54,4 +54,3 @@ datosFechas.then(response => response.json())
 
 }
 //FINALMENTE EXPORTAMOS LA FUNCION PORQUE EL PROYECTO PIDE EL USO DE MODULARIZACIÓN CON IMPORT Y EXPORT
-//export enviarPeticion;
