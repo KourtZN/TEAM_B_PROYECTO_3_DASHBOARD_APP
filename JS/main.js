@@ -10,6 +10,12 @@ let mensual = document.getElementById('mensual')
 let anual = document.getElementById('anual')
 let descripcion = document.getElementById('descripcion')
 
+let litecoin = document.getElementById('litecoin')
+litecoin.addEventListener('click', ()=> {
+    moneda = 'litecoin'
+    enviarPeticion(moneda,periodo)
+})
+
 //Listeners de los botones de periodos
 semanal.addEventListener('click', () => {
     periodo = 'semana'
