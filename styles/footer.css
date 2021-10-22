@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.footer{
+    
+    background-color: black;
+    padding: 2rem;
+    height: 38vh;
+    width: 99vw;
+    max-width: 100%;
+    bottom: 0;
+    color:white;
+    
+}
+
+.footer__list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+   
+
+    
+}
+
+.footer__ulist{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 2.5rem;
+    list-style: none;
+
+}
+
+.footer__copy{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    bottom: 0;
+
+}
