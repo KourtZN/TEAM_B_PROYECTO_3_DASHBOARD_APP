@@ -12,6 +12,12 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./styles/carousel.css'>
   
     <link rel="stylesheet" href="./styles/footer.css">
+
+    <link rel="stylesheet" href="./styles/grafica.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
     <title>Dashboard TEAM B</title>
 
     <style>A{text-decoration: none};</style>
@@ -47,67 +53,94 @@
             <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 2 , "initialIndex": 2}'>
                 <div>
                     <h2>LiteCoin</h2>
-                    <a href="#myChart">
+                    <a href="#main">
                         <img class="carousel-image" data-flickity-lazyload="./images/litecoin-ltc-logo-full.svg" id="litecoin"/>
                     </a>
                 </div>
                 <div>
                     <h2>DogeCoin</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/dogecoin-doge-logo.svg" />
+                    </a>
                 </div>
                 <div>
                     <h2>Bitcoin</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-btc-logo-full.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Ethereum</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/ethereum-eth-logo-full-vertical.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Bitcoin Cash</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/bitcoin-cash-bch-logo-alternative.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Eos</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/eos-eos-logo.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>ZCash</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/zcash-zec-logo.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Tether</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/tether-usdt-logo.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Compound Dai</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/compound-dai-cdai-logo.svg" />
+                </a>
                 </div>    
                 <div>
                     <h2>Binance Coin</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/binance-coin-bnb-logo.svg" />
+                </a>
                 </div>
                 <div>
                     <h2>Waves</h2>
+                    <a href="#main">
                     <img class="carousel-image" data-flickity-lazyload="./images/waves-waves-logo.svg" />
+                </a>
                 </div>
                 </div>
         </section>
-        <section>
-            <!--aquí poner sección de la gráfica -->
+        <section id="main">
 
-            <div style="position: relative;width:60%;margin:auto;">
-                <button id="semanal">Semanal</button>
-                <button id="mensual">Mensual</button>
-                <button id="anual">Anual</button>
-                
+            <div class="intro">
+                <h3 id="monedaTitulo">Bitcoins</h3>
+                <p id="descripcion">Bitcoin es un sistema de dinero en efectivo electrónico entre pares que no tiene una autoridad central y
+                    no depende de bancos u otras instituciones financieras para operar.</p>
             </div>
-            <!-- el elemento canvas es el que se usa para meter la gráfica en el DOM-->
-            <div style="position: relative;width:60%;margin:auto;">
-
+            <div class="grafica-section">
+                <h4>Conoce su valor</h4>
+                <div id="botones">
+                    <button id="semanal">Semanal</button>
+                    <button id="mensual">Mensual</button>
+                    <button id="anual">Anual</button>
+                </div>
+               
+            </div>
+        </section>
+    
+        <section id="grafica">
+            <div style="position: relative;width:100%;margin:auto;height:85%;">
                 <canvas id="myChart" width="400" height="400" ></canvas> 
             </div>
-
         </section>
         </main>
 
