@@ -11,25 +11,18 @@
 import { crearChart } from './crearGrafica.js';  
 export function enviarPeticion(moneda,periodo){
 
-    let tiempo = 2592000000 //TIEMPO ES UNA VARIABLE QUE CONTIENE EL PERIODO EN FORMATO DE MILISEGUNDOS PORQUE ASÍ LO UTILIZA LA API
-    let intervalo = 'd1'//EL INTERVALO ES UN VALOR QUE PIDE EL API PARA SABER SI QUIERES SABER LOS DATOS POR DÍA, POR HORA, POR MINUTO, ETC.
+    let intervalo = '365'//EL INTERVALO ES UN VALOR QUE PIDE EL API PARA SABER SI QUIERES SABER LOS DATOS POR DÍA, POR HORA, POR MINUTO, ETC.
 
     //ESTOS IFs DECIDEN LOS VALORES QUE SE VAN A MANDAR EN LA PETICIÓN DEPENDIENDO DEL PERIODO QUE SE QUIERE CONSULTAR
     if(periodo === 'año'){
-        intervalo = 'd1'
-        tiempo = 31557600000 //un año en milisegundos
+        intervalo = '365'
     }else if(periodo === 'mes'){
-        intervalo = 'd1'
-        tiempo = 2592000000 //un mes en milisegundos
+        intervalo = '30'
     }else {
-        intervalo = 'h6'
-        tiempo = 604800000 //una semana en milisegundos
+        intervalo = '7'
     }
-let endDate = Date.now() // fecha de hoy en milisegundos
-let startDate = Date.now() - tiempo // RESTAMOS EL PERIODO A LA FECHA DE HOY PARA OBTENER LA FECHA DE INICIO DE LA GRÁFICA Y SIEMPRE TENER DATOS ACTUALES
 //Con esta linea se ensambla el endpoint con sus parámetros
-const urlApi = `https://api.coincap.io/v2/assets/${moneda}/history?interval=${intervalo}&start=${startDate}&end=${endDate}`
-
+const urlApi = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${moneda}&tsym=USD&limit=${intervalo}&toTs=-1&api_key=506abc177702f824c58b578cdb901db4aa861860e56ce8fa9b525a680364706f`
 //EJECUTAMOS PETICIÓN AL API CON LOS DATOS QUE QUEREMOS
 console.log(urlApi)
 const datosFechas = fetch(urlApi);
@@ -39,9 +32,11 @@ datosFechas.then(response => response.json())
     let fechas =  [] //ARREGLO PARA DEPOSITAR LAS FECHAS
     let precios = [] //ARREGLO PARA DEPOSITAR LOS PRECIOS
     //AQUI RECORREMOS EL ARREGLO QUE VIENE DEL API PARA SACAR LOS DATOS Y DEPOSITARLOS EN LOS ARREGLOS FECHAS Y PRECIOS
-   preciosDias.data.forEach(dia => {
-        fechas.push(new Date(Date.parse(dia.date)).toLocaleString())
-        precios.push(+dia.priceUsd)
+   preciosDias.Data.Data.forEach(dia => {
+        fechas.push(
+            new Date(dia.time * 1000).toLocaleString().split(' ')[0]
+        )
+        precios.push(+dia.open)
     })
     console.log(fechas) //COMPROBAMOS QUE SE LLENÓ CORRECTAMENTE LOS DOS ARREGLOS
     console.log(precios)
