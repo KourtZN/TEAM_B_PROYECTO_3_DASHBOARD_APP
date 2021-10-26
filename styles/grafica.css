@@ -1,4 +1,4 @@
-#main {
+.main-container {
     width: 80%;
     height: 250px;
     margin: 50px auto 0 auto;
@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-#botones {
+.seccion-botones {
     width: 80%;
     margin: auto;
     display: block;
@@ -64,7 +64,7 @@ button:hover {
     background-color: #A37840;
 }
 
-#grafica {
+.grafica {
     width: 80%;
     height: 700px;
     margin: auto;
