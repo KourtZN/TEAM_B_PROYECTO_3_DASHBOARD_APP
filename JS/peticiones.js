@@ -24,7 +24,6 @@ export function enviarPeticion(moneda,periodo){
 //Con esta linea se ensambla el endpoint con sus parámetros
 const urlApi = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${moneda}&tsym=USD&limit=${intervalo}&toTs=-1&api_key=506abc177702f824c58b578cdb901db4aa861860e56ce8fa9b525a680364706f`
 //EJECUTAMOS PETICIÓN AL API CON LOS DATOS QUE QUEREMOS
-console.log(urlApi)
 const datosFechas = fetch(urlApi);
 datosFechas.then(response => response.json())
 //OBTENIENDO LOS DATOS DEL API, AQUÍ COMENZAMOS A MANIPULARLOS PARA OBTENER SÓLAMENTE LA FECHA Y EL PRECIO PARA GRAFICARLOS
@@ -38,8 +37,6 @@ datosFechas.then(response => response.json())
         )
         precios.push(+dia.open)
     })
-    console.log(fechas) //COMPROBAMOS QUE SE LLENÓ CORRECTAMENTE LOS DOS ARREGLOS
-    console.log(precios)
     const titulo = `Precios de ${moneda} por ${periodo} al día de hoy, en USD` // armar titulo de la gráfica
     let precio = document.getElementById('precio')
     precio.innerHTML = `$${(precios[precios.length - 1]).toFixed(2)}`

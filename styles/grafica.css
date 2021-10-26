@@ -74,7 +74,7 @@ button:hover {
     width: 80%;
     height: 700px;
     margin: auto;
-    background-image:url(../img/back-grafica.jpg);
+    background-image:url(../images/back-grafica.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -88,4 +88,11 @@ button:hover {
     font-weight: bolder;
     padding: 20px 0 0 0;
     
+}
+
+.grafica_contenedor{
+    position: relative;
+    width:100%;
+    margin:auto;
+    height:85%;
 }
