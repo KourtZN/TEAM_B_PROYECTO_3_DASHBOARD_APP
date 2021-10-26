@@ -15,3 +15,6 @@ La plataforma dashboard se compone con 4 principales secciones.
 
 En general es una plataforma de uso intuitivo que proporciona la información más importante y 
 sobresaliente que puede llegar a interesar para invertir en alguna de ellas.
+
+El api que utilizamos es proporcionado por la página https://www.cryptocompare.com/ , cuenta con un amplio
+repertorio de criptomonedas y formas diferentes de consultar la información
